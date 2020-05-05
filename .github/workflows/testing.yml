@@ -24,4 +24,4 @@ jobs:
       
     # Run the tests
     - name: Angular run Karma tests
-      run: cd riskchallenger-test && ng test
+      run: cd riskchallenger-test && npx ng test
