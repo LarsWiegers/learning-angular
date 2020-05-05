@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from '../dashboard/dashboard.component'
 import { LoginComponent } from '../login/login.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
+import {ProjectsComponent} from '../projects/projects.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
     path: 'dashboard',
     redirectTo: '',
     pathMatch: 'full'
+  },
+  {
+    path: 'projects',
+    component: ProjectsComponent,
   },
   {
     path: 'login',

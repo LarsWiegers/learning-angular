@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     DashboardComponent,
     LoginComponent,
     PageNotFoundComponent,
-    SideBarComponent
+    SideBarComponent,
+    TopBarComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
