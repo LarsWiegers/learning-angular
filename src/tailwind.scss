@@ -1,0 +1,9 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+$fa-font-path: "assets/webfonts";
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
+
