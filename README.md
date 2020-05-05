@@ -29,6 +29,25 @@ And its creates the files needed for the component, such as the css file and htm
 It also adds a test for the created component.
 
 
+## using components
+We can pass data from the parent component to the child component using this syntax:
+``<child-component [text]="'text'"></child-component``
+
+In this example we are passing in a text attribute with the literal value of 'text'. 
+The component can then use this by asigning a property to its class object like this: 
+
+```  
+@Input()
+text = 'default text';
+```
+
+Here we are using the input decorator, which you can get using:
+```
+import { Input } from '@angular/core';
+```
+At the top of your file where you are also most likely importing Component.
+
+
 # Angular Readme
 
 # RiskchallengerTest
