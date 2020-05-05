@@ -22,4 +22,21 @@ describe('CounterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should go up one when pressed on the +', () => {
+    let initialCount = component.count = 0;
+    component.onCounterPlus();
+    fixture.detectChanges();
+    let afterCount = component.count;
+
+    expect(initialCount).toBeLessThan(afterCount);
+  });
+  it('should go down one when pressed on the -', () => {
+    let initialCount = component.count = 0;
+    component.onCounterMinus();
+    fixture.detectChanges();
+    let afterCount = component.count;
+
+    expect(initialCount).toBeGreaterThan(afterCount);
+  });
 });
