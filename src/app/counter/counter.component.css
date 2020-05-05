@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 4px;
+  border-radius: 4px;
+}
+.container span {
+  padding: 0 4px;
+}
+.container button{
+  background-color: transparent;
+  border: none;
+  margin: 4px;
+}

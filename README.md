@@ -47,6 +47,13 @@ import { Input } from '@angular/core';
 ```
 At the top of your file where you are also most likely importing Component.
 
+Now we can use this test attribute in the html file using the {{ and }} like this: ```{{text}}```.
+Which will output the value of the input variable to the screen.
+
+We can listen for click events like this: ```<div (click)="onCounterMinus()"></div>```.
+Here we have a event listener for the click event and its gonna call onCounterMinus on the component when clicked.
+Examples of this can be found in the counter component.
+
 
 # Angular Readme
 
