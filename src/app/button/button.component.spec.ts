@@ -1,6 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ButtonComponent } from './button.component';
+import {ButtonComponent} from './button.component';
+import {AppComponent} from '../app.component';
 
 describe('ButtonComponent', () => {
   let component: ButtonComponent;
@@ -8,9 +9,9 @@ describe('ButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ButtonComponent ]
+      declarations: [ButtonComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +22,17 @@ describe('ButtonComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render the default text when no prop is given', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.textContent).toBe(component.text);
+  });
+
+  it('should render the given text prop as the text', () => {
+    component.text = 'test';
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.textContent).toBe('test');
   });
 });
