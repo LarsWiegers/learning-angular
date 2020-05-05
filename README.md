@@ -20,3 +20,10 @@ Now cd into it.
 after that is done you should now see a browser window open with the app running on port 4200. 
 
 On this page you see a lot of next steps, that might be interesting for you, check out for example the components and testing. 
+
+### generate components
+``ng generate component COMPONENT_NAME``
+When generating components, angular adds the the component to the app.module.ts file.
+
+And its creates the files needed for the component, such as the css file and html file and the js file. 
+It also adds a test for the created componet
