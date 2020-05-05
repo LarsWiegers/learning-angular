@@ -24,4 +24,4 @@ jobs:
       
     # Run the tests
     - name: Angular run Karma tests
-      uses: ahmedrizwan/angular-karma-test-action@v1.0.8
+      run: cd riskchallenger-test && ng test
