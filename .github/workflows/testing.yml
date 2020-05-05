@@ -22,6 +22,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       
-    # Run the tests
-    - name: Angular run Karma tests
-      run: cd riskchallenger-test && npx ng test
+    - name: Node $
+      uses: actions/setup-node@v1
+      with:
+        node-version: $
+
+      - name: npm install and npm run build
+        run: |
+          npm ci
+          npm run build:ci
