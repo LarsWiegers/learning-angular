@@ -17,7 +17,7 @@ export class ProjectsComponent implements OnInit {
     new Project("project project", "1", "Victor", "05/05/2018", "06/12/2019"),
     new Project("Building project", "2", "Lars", "05/05/2018", "06/12/2019"),
   ];
-  filteredProjects = [];
+  filteredProjects = this.allProjects;
 
   onSearch(event: any) {
     let search = this.search;
