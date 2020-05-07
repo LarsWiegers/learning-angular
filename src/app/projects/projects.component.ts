@@ -21,11 +21,7 @@ export class ProjectsComponent implements OnInit {
 
   onSearch(event: any) {
     let search = this.search;
-    console.log(search);
     search = search.charAt(0).toUpperCase() + search.slice(1);
-    console.log(this.allProjects.filter(function(project)  {
-      return project.filter(search);
-    }));
     this.filteredProjects = this.allProjects.filter(function(project)  {
       return project.filter(search);
     });
