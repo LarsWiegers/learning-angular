@@ -1,1 +1,10 @@
-<main class="col-span-9">dashboard works!</main>
+<main class="col-span-9 grid grid-cols-12 p-4 gap-4 relative">
+  <app-dashboard-card class="md:col-span-3 lg:col-span-2 col-span-12 " [title]="'risks'"
+                      [subtitle]="25"></app-dashboard-card>
+  <app-dashboard-card class="md:col-span-3 lg:col-span-2 col-span-12 " [title]="'measures'"
+                      [subtitle]="25"></app-dashboard-card>
+  <app-dashboard-card class="md:col-span-3 lg:col-span-2 col-span-12 " [title]="'value'"
+                      [subtitle]="25"></app-dashboard-card>
+  <app-dashboard-grid class="md:col-span-3 lg:col-span-4 col-span-12 row-start-2"></app-dashboard-grid>
+  <app-dashboard-graph class="md:col-span-3 lg:col-span-4 col-span-12 row-start-2"></app-dashboard-graph>
+</main>

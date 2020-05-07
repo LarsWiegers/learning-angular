@@ -1,0 +1,13 @@
+<div class="bg-primary-100 pb-1 rounded-t-sm rounded-b-md hover:text-white text-gray-500 transition-all duration-150 "
+     [ngClass]="{'absolute top-0 right-0 bottom-0 left-0 m-4': fullscreen}">
+  <div class="md:px-2 lg:px-6 lg:pb-2 bg-primary-900 text-center text-current rounded-t-sm rounded-b-lg rounded relative"
+       [ngStyle]="{'left:-1px; width:102%': !fullscreen}">
+    <div class="graph"></div>
+    <button class="absolute bottom-0 right-0 mb-4 mr-4 cursor-pointer text-current focus:outline-none" (click)="grow()">
+      <i class="fa fa-compress text-current"></i>
+    </button>
+  </div>
+</div>
+
+
+

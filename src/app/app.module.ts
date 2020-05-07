@@ -13,6 +13,9 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import {FormsModule} from '@angular/forms';
 import { TabletAppComponent } from './tablet-app/tablet-app.component';
+import { DashboardCardComponent } from './dashboard-card/dashboard-card.component';
+import { DashboardGridComponent } from './dashboard-grid/dashboard-grid.component';
+import { DashboardGraphComponent } from './dashboard-graph/dashboard-graph.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { TabletAppComponent } from './tablet-app/tablet-app.component';
     SideBarComponent,
     TopBarComponent,
     ProjectsComponent,
-    TabletAppComponent
+    TabletAppComponent,
+    DashboardCardComponent,
+    DashboardGridComponent,
+    DashboardGraphComponent
   ],
   imports: [
     BrowserModule,
