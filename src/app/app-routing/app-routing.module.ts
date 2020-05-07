@@ -9,12 +9,12 @@ import {TabletAppComponent} from '../tablet-app/tablet-app.component';
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent,
+    redirectTo: '',
+    pathMatch: 'full'
   },
   {
     path: 'dashboard',
-    redirectTo: '',
-    pathMatch: 'full'
+    component: DashboardComponent
   },
   {
     path: 'projects',

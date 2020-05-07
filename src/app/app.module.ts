@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { ChartjsModule } from '@ctrl/ngx-chartjs';
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './button/button.component';
+import { ButtonComponent  as AppButton } from './button/button.component';
 import { CounterComponent } from './counter/counter.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
@@ -20,7 +20,7 @@ import { DashboardGraphComponent } from './dashboard-graph/dashboard-graph.compo
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonComponent,
+    AppButton,
     CounterComponent,
     DashboardComponent,
     LoginComponent,
@@ -36,7 +36,8 @@ import { DashboardGraphComponent } from './dashboard-graph/dashboard-graph.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ChartjsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
