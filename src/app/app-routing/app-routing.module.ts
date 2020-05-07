@@ -4,6 +4,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component'
 import { LoginComponent } from '../login/login.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 import {ProjectsComponent} from '../projects/projects.component';
+import {TabletAppComponent} from '../tablet-app/tablet-app.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'tablet-app',
+    component: TabletAppComponent,
   },
   {
     path: '**',

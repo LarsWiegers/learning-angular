@@ -12,6 +12,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import {FormsModule} from '@angular/forms';
+import { TabletAppComponent } from './tablet-app/tablet-app.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {FormsModule} from '@angular/forms';
     PageNotFoundComponent,
     SideBarComponent,
     TopBarComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    TabletAppComponent
   ],
   imports: [
     BrowserModule,
