@@ -26,13 +26,13 @@ describe('ButtonComponent', () => {
 
   it('should render the default text when no prop is given', () => {
     const compiled = fixture.nativeElement;
-    expect(compiled.textContent).toBe(component.text);
+    expect(compiled.textContent.trim()).toBe(component.text);
   });
 
   it('should render the given text prop as the text', () => {
     component.text = 'test';
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.textContent).toBe('test');
+    expect(compiled.textContent.trim()).toBe('test');
   });
 });

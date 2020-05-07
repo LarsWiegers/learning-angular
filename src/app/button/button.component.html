@@ -1,4 +1,4 @@
 <button class="bg-blue-400 text-white px-2 py-2">
-  <i [className]="'fa fa-' + icon"></i>
+  <i [className]="'fa fa-' + icon" *ngIf="icon != null"></i>
   {{text}}
 </button>
