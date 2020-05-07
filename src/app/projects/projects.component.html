@@ -1,39 +1,74 @@
 <main class="w-full pr-8">
-  <div class="w-full flex justify-between p-5 pr-8">
+  <div class="w-full flex justify-between p-5 pr-0">
     <h1 class="text-4xl text-gray-600">Projects</h1>
     <form class="relative">
-      <input type="search" class="p-4 py-3 pl-8 z-0 rounded" placeholder="search" name="search" [(ngModel)]="search" (keyup)="onSearch($event)">
+      <input type="search" class="p-4 py-3 pl-8 z-0 rounded" placeholder="search" name="search" [(ngModel)]="search"
+             (keyup)="onSearch($event)">
       <i class="fa fa-search text-gray-500 absolute top-0 left-0 mt-4 ml-2 z-10 text-xl"></i>
     </form>
   </div>
-  <div class="w-full pr-8 pl-8">
-    <table class=" table w-full pr-8">
-      <thead class="">
-        <th class="text-sm uppercase text-gray-500 text-left w-4/12">
-          Project name
-        </th>
-        <th class="text-sm uppercase text-gray-500 text-left w-1/12">
-          Version
-        </th>
-      <th class="text-sm uppercase text-gray-500 text-left w-3/12">
-        risk manager
-      </th>
-      <th class="text-sm uppercase text-gray-500 text-left w-2/12">
-        date created
-      </th>
-      <th class="text-sm uppercase text-gray-500 text-right w-2/12">
-        last change
-      </th>
-      </thead>
-      <tbody>
-        <tr *ngFor="let project of filteredProjects" class="text-gray-500">
-          <td class="text-sm text-gray-500 text-left w-4/12">{{project.name}}</td>
-          <td class="text-sm text-gray-500 text-left w-1/12">{{project.version}}</td>
-          <td class="text-sm text-gray-500 text-left w-3/12">{{project.riskmanager}}</td>
-          <td class="text-sm text-gray-500 text-left w-2/12">{{project.date_created}}</td>
-          <td class="text-sm text-gray-500 text-right w-2/12">{{project.last_change}}</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class=" p-5 pr-0">
+    <div class="">
+      <div class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+        <table class="min-w-full">
+          <thead>
+          <tr>
+            <th (click)="orderBy('name')"
+              class="px-6 py-3 border-b border-gray-200 bg-primary text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+              Project name
+            </th>
+            <th
+              (click)="orderBy('version')"
+              class="px-6 py-3 border-b border-gray-200 bg-primary text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+              Version
+            </th>
+            <th (click)="orderBy('riskmanger')"
+              class="px-6 py-3 border-b border-gray-200 bg-primary text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+              risk manager
+            </th>
+            <th (click)="orderBy('date_created')"
+              class="px-6 py-3 border-b border-gray-200 bg-primary text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+              date created
+            </th>
+            <th (click)="orderBy('last_change')"
+              class="px-6 py-3 border-b border-gray-200 bg-primary text-right text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider cursor-pointer">
+              last change
+            </th>
+          </tr>
+          </thead>
+          <tbody class="bg-white">
+          <tr *ngFor="let project of filteredProjects">
+            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+              <div class="flex items-center">
+
+                <div class="ml-4">
+                  <div class="text-sm leading-5 font-medium text-gray-900">{{project.name}}</div>
+                </div>
+              </div>
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+              <div class="text-sm leading-5 text-gray-900">{{project.version}}</div>
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+              <div class="flex items-center">
+                <div class="flex-shrink-0 h-10 w-10">
+                  <img class="h-10 w-10 rounded-full" [src]="project.risk_manager_image" alt=""/>
+                </div>
+                <div class="ml-4">
+                  {{project.riskmanager}}
+                </div>
+              </div>
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
+              <div class="text-sm leading-5 text-gray-900">{{project.date_created}}</div>
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
+              <a href="#" class="text-indigo-600 hover:text-indigo-900">{{project.last_change}}</a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </main>

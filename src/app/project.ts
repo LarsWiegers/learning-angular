@@ -1,10 +1,10 @@
 export class Project {
-  constructor(
-    public name : string,
-    public version: string,
-    public riskmanager : string,
-    public date_created : string,
-    public last_change : string) {}
+    constructor(
+        public name: string,
+        public version: string,
+        public riskmanager: string,
+        public date_created: string,
+        public last_change: string, public risk_manager_image: string) {}
 
     filter(search_string) {
       return (this.name.includes(search_string) ||

@@ -11,16 +11,47 @@
       <i class="fas fa-inbox text-xl text-gray-200 mr-3 w-6 h-6"></i>
       Archive
     </a>
-    <a routerLink="/tablet-app" routerLinkActive="active" class="px-10 text-gray-500 text-sm p-4 mb-2 uppercase font-bold">
+    <a routerLink="/tablet-app" routerLinkActive="active" class="px-10 text-gray-500 text-sm p-4 mb-2 uppercase font-bold ">
       <i class="fas fa-download text-xl text-gray-200 mr-3 w-6 h-6"></i>
       Tablet app
     </a>
   </div>
-  <button class="self-start w-full bg-primary-900 w-full flex flex-col relative  py-3">
-    <h1 class="text-gray-100 font-bold px-5 text-sm w-full">Diederik Bol</h1>
-    <div class="text-sm text-gray-300 px-5">
-        Log out
+  <div class="lg:w-full">
+    <div class="self-start w-full flex flex-col relative">
+      <ol class="px-2 py-2 my-3 flex justify-evenly">
+        <li class="mr-2">
+          <button class="border-gray-500 border rounded-lg px-2 py-1 focus:bg-white focus:text-gray-300 focus:outline-none">
+            <i class="fa fa-search text-gray-500 text-sm"></i>
+          </button>
+        </li>
+        <li class="mr-2">
+          <button class="border-gray-500 border rounded-lg px-2 py-1 focus:bg-white focus:text-gray-300 focus:outline-none">
+            <i class="fa fa-folder text-gray-500 text-sm"></i>
+          </button>
+        </li>
+        <li class="mr-2">
+          <button class="border-gray-500 border rounded-lg px-2 py-1 focus:bg-white focus:text-gray-300 focus:outline-none">
+            <i class="fa fa-users text-gray-500 text-sm"></i>
+          </button>
+        </li>
+        <li class="mr-2">
+          <button class="border-gray-500 border rounded-lg px-2 py-1 focus:bg-white focus:text-gray-300 focus:outline-none">
+            <i class="fa fa-comment-alt text-gray-500 text-sm"></i>
+          </button>
+        </li>
+        <li class="mr-2">
+          <button class="border-gray-500 border rounded-lg px-2 py-1 focus:bg-white focus:text-gray-300 focus:outline-none">
+            <i class="fa fa-address-card text-gray-500 text-sm"></i>
+          </button>
+        </li>
+      </ol>
     </div>
-    <div class="text-gray-300 mr-3 mb-4 absolute bottom-0 right-0"><i class="fa fa-caret-down"></i></div>
-  </button>
+    <button class="bg-primary-900 flex flex-col relative py-3 max-w-full lg:w-full">
+      <h1 class="text-gray-100 font-bold px-5 text-sm w-full">Diederik Bol</h1>
+      <div class="text-sm text-gray-300 px-5">
+        Log out
+      </div>
+      <div class="text-gray-300 mr-3 mb-4 absolute bottom-0 right-0"><i class="fa fa-caret-down"></i></div>
+    </button>
+  </div>
 </aside>
